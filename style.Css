@@ -1,0 +1,161 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+:root {
+    --bg: #FFFFFF;
+    --ecriture: #000000;
+    --red: rgb(255, 86, 86);
+    --blue: rgb(100, 154, 255);
+    --boxShadow: rgb(158, 158, 158);
+}
+
+body.dark {
+    --bg: #353535;
+    --ecriture: #ffffff;
+    --boxShadow: rgb(0, 0, 0);
+}
+
+body {
+    background: var(--bg);
+    font-family: sans-serif;
+}
+
+.container h1 {
+    color: var(--ecriture);
+}
+
+.container {
+    padding-top: 150px;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.inputAndBtn {
+    position: relative;
+    width: 100%;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+#taskInput {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0px 0px 5px 0px var(--boxShadow);
+}
+
+#addBtn {
+    position: absolute;
+    right: 0;
+    width: 39px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--blue);
+    border: none;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: rgb(171, 200, 255);
+}
+
+.nbAndAllClear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: var(--ecriture);
+    border-bottom: 2px solid var(--ecriture);
+}
+
+#clearBtn {
+    height: 39px;
+    padding: 10px 20px;
+    background: var(--red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#clearBtn:hover {
+    background: rgb(255, 183, 183);
+}
+
+#taskList {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 39px;
+    box-shadow: 0px 0px 5px 0px var(--boxShadow);
+    background: white;
+}
+
+.paralist {
+    margin-left: 10px;
+}
+
+.inputChangeName {
+    position: absolute;
+    left: 10px;
+    padding: 5px;
+    display: none;
+}
+
+.btnDeleteTask {
+    width: 39px;
+    height: 39px;
+    background: var(--red);
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btnDeleteTask:hover {
+    background: rgb(255, 183, 183);
+}
+
+#darkMode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0 var(--boxShadow);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#darkMode:hover {
+    background: #979797;
+}
